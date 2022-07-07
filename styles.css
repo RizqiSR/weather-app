@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* untuk menghilangkan efek float left dari title 
+agar value dapat di float rigth dengan sempurna */
+
+/* some layout settings inspired by Colin Espinas => https://codepen.io/Call_in/pen/pMYGbZ */
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;  
+    background-color: rgb(94, 105, 206);
+    font-family: "Poppins";
+    letter-spacing: 1px;
+}
+
+.container {
+    /* border: 2px solid red; */
+    height: 450px;
+    color: white;
+    background-color: #4e25af;
+    border-radius: 30px;
+    box-shadow: 12px 12px 30px rgb(45, 10, 86), -12px -12px 18px rgb(76, 87, 184)
+}
+
+.weather-today {
+    /* border: 2px solid blue; */
+    border-radius: 30px;
+    position: relative;
+    height: 100%;
+    width: 320px;
+    float: left;
+    background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+}
+
+.weather-gradient {
+    /* border: 2px solid purple;*/
+    border-radius: 30px;
+    background-image: linear-gradient(150deg, purple, blue 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+.date-container {
+    /* border: 2px solid brown;*/
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.day {  
+    /*border: 2px solid orange;*/
+    margin: 0;
+}
+
+.date {
+    /*border: 2px solid red;*/
+    display: block;
+}
+
+.location {
+    /*border: 2px solid blue;*/
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.location-icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.weather-container {
+    /*border: 2px solid mediumspringgreen;*/
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.weather-icon {
+    /*border: 2px solid yellow;*/
+    height: auto;
+    width: 100px;
+}
+.weather-desc {
+    margin: 0;
+    font-weight: 200;
+}
+
+.temperature {
+    /*border: 2px solid black;*/
+    margin: 0;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.weather-info {
+    /*border: 2px solid green;*/
+    position: relative;
+    float: left;
+    height: 100%;
+    top: 15px;
+}
+
+/* untuk menghilangkan efek float left dari title 
+agar value dapat di float rigth dengan sempurna */
+.clear {
+    clear: both;
+}
+
+.today-info {
+    /*border: 2px solid black;*/
+    border-radius: 30px;
+    padding: 15px;
+    margin: 0 25px 25px 25px;
+}
+
+.today-info > div .info {
+    /*border: 2px solid orangered;*/
+    float: left;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.today-info > div .value {
+    /*border: 2px solid royalblue;*/
+    float: right;
+}
+
+.week-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 35px;
+    border-radius: 15px;
+    
+}
+
+.week-list > li {
+    border: 2px solid #8163c8;
+    float: left;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.week-list > li .day-icon {
+    display: block;
+    height: 60px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.week-list > li .next-day {
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.week-list > li .daily-temp {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+
+
+.location-container {
+    /*border: 2px solid mediumspringgreen;*/
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-btn {
+    position: absolute;
+    top: 6px;
+    margin: 0;
+    border: none;
+    background-color: #4e25af;
+    color: white;
+    cursor: pointer;  
+}
+
+.input-loc {
+    background: none;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 10px;
+    width: 60%;
+    color: white;
+}
+
+.input-loc:focus {
+    outline: none;
+}
+
+.input-loc::placeholder {
+    color: #bca1fc;
+}
+
+
+@media screen and (max-width: 595px) {
+    .weather-today {
+        float: none;
+        background-size: cover;
+        height: 100vw;
+    }
+
+    .container {
+        height: fit-content;
+    }
+
+    .weather-info {
+        top: 0;
+        width: 100%;
+        padding: 25px 0 25px 0;
+        /* border: 2px solid red; */
+    }
+
+    .today-info {
+        margin: 0;
+        padding: 0 25px;
+    }
+
+    .week-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .week-list > li {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: center;
+    }
+
+     .week-list > li .day-icon {
+        display: inline;
+        height: 50px;
+        width: auto;
+        margin: 0;
+        /* border: 2px solid red; */
+    }
+    
+    .week-list > li .next-day {
+        display: inline;
+        margin-left: 10px;
+        /* border: 2px solid red;  */
+    }
+    
+    .week-list > li .daily-temp {
+        display: inline;
+        font-size: larger;
+        margin-left: 10px;
+        /* border: 2px solid red; */
+    }
+
+    .location-container {
+        position: relative;
+        bottom: 0;
+        /* border: 2px solid black; */
+    }
+
+}

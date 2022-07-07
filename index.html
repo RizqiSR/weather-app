@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaca App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/07eb2a53fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- layout inspired by Colin Espinas => https://codepen.io/Call_in/pen/pMYGbZ -->
+    <div class="container">
+
+        <div class="weather-today">
+            <div class="weather-gradient"></div>
+
+            <div class="date-container">
+                <h2 class="day">Saturday</h2>
+                <span class="date">25 Juni 2022</span>
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <span class="loc">Bekasi, INA</span>
+            </div>
+
+            <div class="weather-container">
+                <img class="weather-icon" src="" alt="">
+                <h1 class="temperature">29°C</h1>
+                <h2 class="weather-desc">Sunny</h2>
+            </div>
+        </div>
+
+        <div class="weather-info">
+
+            <div class="today-info">
+                <div class="precipitation">
+                    <span class="info">Cloudy</span><span class="value">0%</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="humidity">
+                    <span class="info">Humidity</span><span class="value">25%</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="wind">
+                    <span class="info">Wind</span><span class="value">20 km/h</span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="week-container">
+                <ul class="week-list">
+                    <li>
+                        <img class="day-icon"></img>
+                        <span class="next-day">Sat</span><span class="daily-temp">29°C</span><span class="daily-desc"></span>
+                    </li>
+                    <li>
+                        <img class="day-icon"></img>
+                        <span class="next-day">Sun</span><span class="daily-temp">28°C</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="location-container">
+                <div class="search-location">
+                    <form id="locationInput">
+                        <input type="text" class="input-loc" placeholder="Search City...">
+                        <button type="button" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass fa-2x btn"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
